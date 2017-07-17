@@ -1,0 +1,21 @@
+*{margin:0;
+padding:0;}
+
+body{text-align:center;background-color:blanchedalmond;}
+
+#wrapper{width:600px; margin:0 auto; }
+
+.colourSquare{
+    height: 300px;
+    width:300px;
+    float:left;
+    -webkit-transition: all 2s ease-in 0s; 
+    
+}
+#outerSquare{
+    width:600px;
+}
+#topLeft{background-color: red;}
+#topRight{background-color:yellow; }
+#bottomLeft{background-color:  navy;}
+#bottomRight{background-color: blue;}

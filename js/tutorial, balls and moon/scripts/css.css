@@ -1,0 +1,4 @@
+*{margin:0;
+padding:0;}
+canvas {background-color:black; background-image: url(../moon.jpg); background-repeat:no-repeat; background-size:cover;}
+body{text-align:center;}
