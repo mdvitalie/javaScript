@@ -1,4 +1,4 @@
-console.log("script.js file loaded (libraries)");
+console.log("... JS10 script.js file has loaded ...");
 
- mcr_sf.sayHello (mcr_sf.myName);
- mcr_sp.welcome(mcr_sp.myName);
+//mcr_sp.welcome(mcr_sp.myName);
+//mcr_sf.sayHello(mcr_sf.myName);
