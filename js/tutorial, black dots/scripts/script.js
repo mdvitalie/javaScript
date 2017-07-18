@@ -1,3 +1,4 @@
+//tutorial from - https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA
 console.log("script.js file loaded");
 var canvas = document.querySelector("canvas");
 console.log(canvas);

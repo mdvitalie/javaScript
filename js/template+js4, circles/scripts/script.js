@@ -1,3 +1,5 @@
+//tutorial from - https://www.youtube.com/channel/UC9Yp2yz6-pwhQuPlIDV_mjA
+
 console.log("script.js file loaded");
 console.log("making canvas the whole width/height of page");
 var canvas = document.querySelector("canvas");
