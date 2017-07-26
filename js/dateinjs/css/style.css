@@ -1,0 +1,13 @@
+#wrapper {
+    width: 600px;
+	margin: auto;
+	background-color: goldenrod;
+	}
+  body {
+    background-color: blanchedalmond;
+  }
+  #toggleDiv {
+	transition-timing-function: ease-out;
+	transition: 1s;
+	overflow: hidden;
+  }

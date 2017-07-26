@@ -15,10 +15,12 @@ var mouse = {
 };
 
 var colors = [
-	'#2185C5',
-	'#7ECEFD',
-	'#FFF6E5',
-	'#FF7F66'
+	'#454567',
+	'#2354dd',
+	'#F2dd77',
+	'#211155',
+    '#436272'
+    
 ];
 
 
@@ -35,7 +37,9 @@ addEventListener("resize", function() {
 	init();
 });
 
-
+addEventListener("click", function(){
+    init();
+});
 // Utility Functions
 function randomIntFromRange(min,max) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
@@ -54,7 +58,6 @@ function Ball(x, y, dx, dy, radius, color) {
     this.dx = dx;
 	this.radius = radius;
 	this.color = color;
-
 	this.update = function() {
         if(this.y + this.radius + this.dy > canvas.height){
             this.dy=-this.dy*friction;//change in direction when it gets to the surface
@@ -64,7 +67,7 @@ function Ball(x, y, dx, dy, radius, color) {
            this.dy+=gravity;
             
         }
-        if(this.x + this.radius + this.dx>canvas.width || this.x - this.radius - this.dx<0){
+        if(this.x + this.radius + this.dx>canvas.width || this.x - this.radius<=0){
             
         this.dx=-this.dx;
             
@@ -79,25 +82,33 @@ function Ball(x, y, dx, dy, radius, color) {
 		c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);	
 		c.fillStyle = this.color;
 		c.fill();
-        c.strokeStyle = 'rgba(0,0,0, .9)';
-        c.lineWidth = 2;
+        c.strokeStyle="black";
+        c.lineWidth=3;
         c.stroke();
-		c.closePath();
+		c.closePath();  
 	};
 }
+var r = function () {return Math.floor(Math.random()*256)};
+var a = function () {return Math.floor(Math.random()*10)};
+function getRandomColor(){
+    return "rgba(" + r() + "," + r() + "," + r() + "," + " ." + a() + ")";
+}
 
-
+ 
 // Implementation
 var ball;
-var radius = 30;
+
 var ballArray = [];
 function init() {
-    for (var i=0; i<100; i++){//amount of balls
-        
-        var x = randomIntFromRange(radius,canvas.width - radius);
+    ballArray = [];
+    for (var i=0; i<500; i++){//amount of balls
+        var radius = randomIntFromRange(10,40);
+        var x = randomIntFromRange(radius, canvas.width - radius);
          var y = randomIntFromRange(0,canvas.height - radius);
         var dx = randomIntFromRange(-2,2);
-        ballArray.push(new Ball(x, y, dx, 2, 30, 'red'))    
+        var dy = randomIntFromRange(-2,2);
+        var color = getRandomColor(); 
+        ballArray.push(new Ball(x, y, dx, dy, radius, color))    
     }
     
 }

@@ -1,0 +1,4 @@
+JS Task 16:
+===========
+1. Review enclosed code in folder JST16_Solution 
+   and look out for improvement suggestions.

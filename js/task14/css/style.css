@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#wrapper {
+    width: 80%;
+	margin: auto;
+	background-color: orange;
+	color: blue;
+  }
+table{
+    border:1px dashed black;
+    width:100%;
+    margin-top:20px;
+}

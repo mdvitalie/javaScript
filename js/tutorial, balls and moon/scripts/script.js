@@ -20,11 +20,11 @@ var colorArray=[
    'rgba(255,255,255, .8)' 
  
 ];
-window.addEventListener('mousemove', function(event){
+/*window.addEventListener('mousemove', function(event){
     mouse.x = event.x;
     mouse.y = event.y;
     
-});
+});*/
 function Circle(x,y, dx, dy, radius){
   this.x = x;
   this.y = y;
